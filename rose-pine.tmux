@@ -50,59 +50,59 @@ main() {
     # or in the plugin's features
     if [[ $theme == main ]]; then
 
-        thm_base="#191724";
-        thm_surface="#1f1d2e";
-        thm_overlay="#26233a";
-        thm_muted="#6e6a86";
-        thm_subtle="#908caa";
-        thm_text="#e0def4";
-        thm_love="#eb6f92";
-        thm_gold="#f6c177";
-        thm_rose="#ebbcba";
-        thm_pine="#31748f";
-        thm_foam="#9ccfd8";
-        thm_iris="#c4a7e7";
-        thm_hl_low="#21202e";
-        thm_hl_med="#403d52";
-        thm_hl_high="#524f67";
+    thm_base="#0d0c0c"  # dragonBlack0
+    thm_surface="#12120f"  # dragonBlack1
+    thm_overlay="#1D1C19"  # dragonBlack2
+    thm_muted="#625e5a"  # dragonBlack6
+    thm_subtle="#9e9b93"  # dragonGray2
+    thm_text="#a6a69c"  # dragonGray
+    thm_love="#c4746e"  # dragonRed
+    thm_gold="#c4b28a"  # dragonYellow
+    thm_rose="#b6927b"  # dragonOrange
+    thm_pine="#87a987"  # dragonGreen
+    thm_foam="#8ea4a2"  # dragonAqua
+    thm_iris="#8992a7"  # dragonViolet
+    thm_hl_low="#12120f"  # dragonBlack1
+    thm_hl_med="#1D1C19"  # dragonBlack2
+    thm_hl_high="#282727"  # dragonBlack4
 
-    elif [[ $theme == dawn ]]; then
+elif [[ $theme == dawn ]]; then
 
-        thm_base="#faf4ed";
-        thm_surface="#fffaf3";
-        thm_overlay="#f2e9e1";
-        thm_muted="#9893a5";
-        thm_subtle="#797593";
-        thm_text="#575279";
-        thm_love="#b4367a";
-        thm_gold="#ea9d34";
-        thm_rose="#d7827e";
-        thm_pine="#286983";
-        thm_foam="#56949f";
-        thm_iris="#907aa9";
-        thm_hl_low="#f4ede8";
-        thm_hl_med="#dfdad9";
-        thm_hl_high="#cecacd";
+    thm_base="#0d0c0c"  # dragonBlack0
+    thm_surface="#12120f"  # dragonBlack1
+    thm_overlay="#1D1C19"  # dragonBlack2
+    thm_muted="#737c73"  # dragonAsh
+    thm_subtle="#7a8382"  # dragonGray3
+    thm_text="#8ba4b0"  # dragonBlue2
+    thm_love="#a292a3"  # dragonPink
+    thm_gold="#b98d7b"  # dragonOrange2
+    thm_rose="#b6927b"  # dragonOrange
+    thm_pine="#8a9a7b"  # dragonGreen2
+    thm_foam="#8ea4a2"  # dragonAqua
+    thm_iris="#949fb5"  # dragonTeal
+    thm_hl_low="#181616"  # dragonBlack3
+    thm_hl_med="#393836"  # dragonBlack5
+    thm_hl_high="#282727"  # dragonBlack4
 
-    elif [[ $theme == moon ]]; then
+elif [[ $theme == moon ]]; then
 
-        thm_base="#232136";
-        thm_surface="#2a273f";
-        thm_overlay="#393552";
-        thm_muted="#6e6a86";
-        thm_subtle="#908caa";
-        thm_text="#e0def4";
-        thm_love="#eb6f92";
-        thm_gold="#f6c177";
-        thm_rose="#ea9a97";
-        thm_pine="#3e8fb0";
-        thm_foam="#9ccfd8";
-        thm_iris="#c4a7e7";
-        thm_hl_low="#2a283e";
-        thm_hl_med="#44415a";
-        thm_hl_high="#56526e";
+    thm_base="#0d0c0c"  # dragonBlack0
+    thm_surface="#12120f"  # dragonBlack1
+    thm_overlay="#1D1C19"  # dragonBlack2
+    thm_muted="#737c73"  # dragonAsh
+    thm_subtle="#8992a7"  # dragonViolet
+    thm_text="#a6a69c"  # dragonGray
+    thm_love="#c4746e"  # dragonRed
+    thm_gold="#c4b28a"  # dragonYellow
+    thm_rose="#b6927b"  # dragonOrange
+    thm_pine="#87a987"  # dragonGreen
+    thm_foam="#8ea4a2"  # dragonAqua
+    thm_iris="#949fb5"  # dragonTeal
+    thm_hl_low="#181616"  # dragonBlack3
+    thm_hl_med="#393836"  # dragonBlack5
+    thm_hl_high="#282727"  # dragonBlack4
 
-    fi
+fi
 
     # Aggregating all commands into a single array
     local tmux_commands=()
