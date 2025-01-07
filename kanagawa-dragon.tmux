@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 #
-# Rosé Pine - tmux theme
+# Kanagawa Dragon - tmux theme
 #
-# Almost done, any bug found file a PR to rose-pine/tmux
+# Almost done, any bug found file a PR to emretuna/tmux-kanagawa-dragon/
 #
 # Inspired by dracula/tmux, catppucin/tmux & challenger-deep-theme/tmux
 #
 #
-export TMUX_ROSEPINE_DIR="$( cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd)"
+export TMUX_KANAGAWA_DRAGON_DIR="$( cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
 get_tmux_option() {
     local option value default
@@ -43,66 +43,49 @@ unset_option() {
 
 main() {
     local theme
-    theme="$(get_tmux_option "@rose_pine_variant" "")"
+    theme="$(get_tmux_option "@kanagawa_dragon_variant" "")"
 
     # INFO: Not removing the thm_hl_low and thm_hl_med colors for posible features
     # INFO: If some variables appear unused, they are being used either externally
     # or in the plugin's features
     if [[ $theme == main ]]; then
 
-        thm_base="#191724";
-        thm_surface="#1f1d2e";
-        thm_overlay="#26233a";
-        thm_muted="#6e6a86";
-        thm_subtle="#908caa";
-        thm_text="#e0def4";
-        thm_love="#eb6f92";
-        thm_gold="#f6c177";
-        thm_rose="#ebbcba";
-        thm_pine="#31748f";
-        thm_foam="#9ccfd8";
-        thm_iris="#c4a7e7";
-        thm_hl_low="#21202e";
-        thm_hl_med="#403d52";
-        thm_hl_high="#524f67";
+    thm_base="#0d0c0c"  # dragonBlack0
+    thm_surface="#12120f"  # dragonBlack1
+    thm_overlay="#1D1C19"  # dragonBlack2
+    thm_muted="#625e5a"  # dragonBlack6
+    thm_subtle="#9e9b93"  # dragonGray2
+    thm_text="#a6a69c"  # dragonGray
+    thm_love="#c4746e"  # dragonRed
+    thm_gold="#c4b28a"  # dragonYellow
+    thm_rose="#b6927b"  # dragonOrange
+    thm_pine="#87a987"  # dragonGreen
+    thm_foam="#8ea4a2"  # dragonAqua
+    thm_iris="#8992a7"  # dragonViolet
+    thm_hl_low="#12120f"  # dragonBlack1
+    thm_hl_med="#1D1C19"  # dragonBlack2
+    thm_hl_high="#282727"  # dragonBlack4
 
-    elif [[ $theme == dawn ]]; then
+elif [[ $theme == light ]]; then
 
-        thm_base="#faf4ed";
-        thm_surface="#fffaf3";
-        thm_overlay="#f2e9e1";
-        thm_muted="#9893a5";
-        thm_subtle="#797593";
-        thm_text="#575279";
-        thm_love="#b4367a";
-        thm_gold="#ea9d34";
-        thm_rose="#d7827e";
-        thm_pine="#286983";
-        thm_foam="#56949f";
-        thm_iris="#907aa9";
-        thm_hl_low="#f4ede8";
-        thm_hl_med="#dfdad9";
-        thm_hl_high="#cecacd";
+    thm_base="#0d0c0c"  # dragonBlack0
+    thm_surface="#12120f"  # dragonBlack1
+    thm_overlay="#1D1C19"  # dragonBlack2
+    thm_muted="#737c73"  # dragonAsh
+    thm_subtle="#7a8382"  # dragonGray3
+    thm_text="#8ba4b0"  # dragonBlue2
+    thm_love="#a292a3"  # dragonPink
+    thm_gold="#b98d7b"  # dragonOrange2
+    thm_rose="#b6927b"  # dragonOrange
+    thm_pine="#8a9a7b"  # dragonGreen2
+    thm_foam="#8ea4a2"  # dragonAqua
+    thm_iris="#949fb5"  # dragonTeal
+    thm_hl_low="#181616"  # dragonBlack3
+    thm_hl_med="#393836"  # dragonBlack5
+    thm_hl_high="#282727"  # dragonBlack4
 
-    elif [[ $theme == moon ]]; then
 
-        thm_base="#232136";
-        thm_surface="#2a273f";
-        thm_overlay="#393552";
-        thm_muted="#6e6a86";
-        thm_subtle="#908caa";
-        thm_text="#e0def4";
-        thm_love="#eb6f92";
-        thm_gold="#f6c177";
-        thm_rose="#ea9a97";
-        thm_pine="#3e8fb0";
-        thm_foam="#9ccfd8";
-        thm_iris="#c4a7e7";
-        thm_hl_low="#2a283e";
-        thm_hl_med="#44415a";
-        thm_hl_high="#56526e";
-
-    fi
+fi
 
     # Aggregating all commands into a single array
     local tmux_commands=()
@@ -137,138 +120,138 @@ main() {
 
     # Shows username of the user the tmux session is run by
     local user
-    user="$(get_tmux_option "@rose_pine_user" "")"
+    user="$(get_tmux_option "@kanagawa_dragon_user" "")"
     readonly user
 
     # Shows hostname of the computer the tmux session is run on
     local host
-    host="$(get_tmux_option "@rose_pine_host" "")"
+    host="$(get_tmux_option "@kanagawa_dragon_host" "")"
     readonly host
 
     # Date and time command: follows the date UNIX command structure
     local date_time
-    date_time="$(get_tmux_option "@rose_pine_date_time" "")"
+    date_time="$(get_tmux_option "@kanagawa_dragon_date_time" "")"
     readonly date_time
 
     # Shows truncated current working directory
     local directory
-    directory="$(get_tmux_option "@rose_pine_directory" "")"
+    directory="$(get_tmux_option "@kanagawa_dragon_directory" "")"
 
     local disable_active_window_menu
-    disable_active_window_menu="$(get_tmux_option "@rose_pine_disable_active_window_menu" "")"
+    disable_active_window_menu="$(get_tmux_option "@kanagawa_dragon_disable_active_window_menu" "")"
 
     local show_current_program
-    show_current_program="$(get_tmux_option "@rose_pine_show_current_program" "")"
+    show_current_program="$(get_tmux_option "@kanagawa_dragon_show_current_program" "")"
     readonly show_current_program
 
     local window_directory
-    window_directory="$(get_tmux_option "@rose_pine_show_pane_directory" "")"
+    window_directory="$(get_tmux_option "@kanagawa_dragon_show_pane_directory" "")"
     readonly window_directory
 
-    local window_separator 
-    window_separator="$(get_tmux_option "@rose_pine_window_separator" "")"
-    readonly window_separator 
+    local window_separator
+    window_separator="$(get_tmux_option "@kanagawa_dragon_window_separator" "")"
+    readonly window_separator
 
     local default_window_behavior
-    default_window_behavior="$(get_tmux_option "@rose_pine_default_window_behavior" "")"
+    default_window_behavior="$(get_tmux_option "@kanagawa_dragon_default_window_behavior" "")"
     readonly default_window_behavior
 
     # Changes the background color for the current active window
     # TODO: Together with line 251-269, end development for this feature
     # local active_window_color
-    # active_window_color="$(get_tmux_option "@rose_pine_active_window_color" "")"
+    # active_window_color="$(get_tmux_option "@kanagawa_dragon_active_window_color" "")"
     # readonly active_window_color
 
     # Transparency enabling for status bar
     local bar_bg_disable
-    bar_bg_disable="$(get_tmux_option "@rose_pine_bar_bg_disable" "")"
+    bar_bg_disable="$(get_tmux_option "@kanagawa_dragon_bar_bg_disable" "")"
     readonly bar_bg_disable
 
     # Transparent option for status bar
     local bar_bg_disabled_color_option
-    bar_bg_disabled_color_option="$(get_tmux_option "@rose_pine_bar_bg_disabled_color_option" "0")"
+    bar_bg_disabled_color_option="$(get_tmux_option "@kanagawa_dragon_bar_bg_disabled_color_option" "0")"
     readonly bar_bg_disabled_color_option
 
     # Shows hostname of the computer the tmux session is run on
     local only_windows
-    only_windows="$(get_tmux_option "@rose_pine_only_windows" "")"
+    only_windows="$(get_tmux_option "@kanagawa_dragon_only_windows" "")"
     readonly only_windows
 
     # Allows user to set a few custom sections (for integration with other plugins)
     # Before the plugin's left section
     local status_left_prepend_section
-    status_left_prepend_section="$(get_tmux_option "@rose_pine_status_left_prepend_section" "")"
+    status_left_prepend_section="$(get_tmux_option "@kanagawa_dragon_status_left_prepend_section" "")"
     readonly status_left_prepend_section
     #
     # after the plugin's left section
     local status_left_append_section
-    status_left_append_section="$(get_tmux_option "@rose_pine_status_left_append_section" "")"
+    status_left_append_section="$(get_tmux_option "@kanagawa_dragon_status_left_append_section" "")"
     readonly status_left_append_section
     # Before the plugin's right section
     local status_right_prepend_section
-    status_right_prepend_section="$(get_tmux_option "@rose_pine_status_right_prepend_section" "")"
+    status_right_prepend_section="$(get_tmux_option "@kanagawa_dragon_status_right_prepend_section" "")"
     readonly status_right_prepend_section
     #
     # after the plugin's right section
     local status_right_append_section
-    status_right_append_section="$(get_tmux_option "@rose_pine_status_right_append_section" "")"
+    status_right_append_section="$(get_tmux_option "@kanagawa_dragon_status_right_append_section" "")"
     readonly status_right_append_section
 
     # Settings that allow user to choose their own icons and status bar behaviour
     # START
     local current_window_icon
-    current_window_icon="$(get_tmux_option "@rose_pine_current_window_icon" "")"
+    current_window_icon="$(get_tmux_option "@kanagawa_dragon_current_window_icon" "")"
     readonly current_window_icon
 
     local current_session_icon
-    current_session_icon="$(get_tmux_option "@rose_pine_session_icon" "")"
+    current_session_icon="$(get_tmux_option "@kanagawa_dragon_session_icon" "")"
     readonly current_session_icon
 
     local username_icon
-    username_icon="$(get_tmux_option "@rose_pine_username_icon" "")"
+    username_icon="$(get_tmux_option "@kanagawa_dragon_username_icon" "")"
     readonly username_icon
 
     local hostname_icon
-    hostname_icon="$(get_tmux_option "@rose_pine_hostname_icon" "󰒋")"
+    hostname_icon="$(get_tmux_option "@kanagawa_dragon_hostname_icon" "󰒋")"
     readonly hostname_icon
 
     local date_time_icon
-    date_time_icon="$(get_tmux_option "@rose_pine_date_time_icon" "󰃰")"
+    date_time_icon="$(get_tmux_option "@kanagawa_dragon_date_time_icon" "󰃰")"
     readonly date_time_icon
 
     local current_folder_icon
-    current_folder_icon="$(get_tmux_option "@rose_pine_folder_icon" "")"
+    current_folder_icon="$(get_tmux_option "@kanagawa_dragon_folder_icon" "")"
     readonly current_folder_icon
 
     # Changes the icon / character that goes between each window's name in the bar
     local window_status_separator
-    window_status_separator="$(get_tmux_option "@rose_pine_window_status_separator" "  ")"
+    window_status_separator="$(get_tmux_option "@kanagawa_dragon_window_status_separator" "  ")"
 
     # This setting does nothing by itself, it enables the 2 below it to toggle the simplified bar
     local prioritize_windows
-    prioritize_windows="$(get_tmux_option "@rose_pine_prioritize_windows" "")"
+    prioritize_windows="$(get_tmux_option "@kanagawa_dragon_prioritize_windows" "")"
 
     # Allows the user to set a min width at which most of the bar elements hide, or
     local user_window_width
-    user_window_width="$(get_tmux_option "@rose_pine_width_to_hide" "")"
+    user_window_width="$(get_tmux_option "@kanagawa_dragon_width_to_hide" "")"
 
     # A number of windows, when over it, the bar gets simplified
     local user_window_count
-    user_window_count="$(get_tmux_option "@rose_pine_window_count" "")"
+    user_window_count="$(get_tmux_option "@kanagawa_dragon_window_count" "")"
 
     # Custom window status that goes between the number and the window name
     local custom_window_sep="#[fg=$thm_iris]#I#[fg=$thm_iris,]$window_separator#[fg=$thm_iris]#W"
     local custom_window_sep_current="#I#[fg=$thm_gold,bg=""]$window_separator#[fg=$thm_gold,bg=""]#W"
 
     local right_separator
-    right_separator="$(get_tmux_option "@rose_pine_right_separator" "  ")"
+    right_separator="$(get_tmux_option "@kanagawa_dragon_right_separator" "  ")"
 
     local left_separator
-    left_separator="$(get_tmux_option "@rose_pine_left_separator" "  ")"
+    left_separator="$(get_tmux_option "@kanagawa_dragon_left_separator" "  ")"
 
     local field_separator
     # NOTE: Don't remove
-    field_separator="$(get_tmux_option "@rose_pine_field_separator" " | " )"
+    field_separator="$(get_tmux_option "@kanagawa_dragon_field_separator" " | " )"
 
     # END
 
